@@ -23,3 +23,8 @@ def url_gen(model, size):
     url = 'http://www.adidas.com/us/nmd_r1-shoes/' + str(model) + '.html?forceSelSize=' + str(model) + '_' + str(shoe_size_code)
     return url
 def check_stock(url):
+    """Doc-string"""
+    headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
+    raw_html = requests.get(url, headers=headers)
+    page = bs4.BeautifulSoup(raw_html.text)
+    
