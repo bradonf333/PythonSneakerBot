@@ -45,4 +45,3 @@ def main(model, size):
     url = url_gen(model, size)
     # Calls the check_stock function passing in the url created 
     check_stock(url, model)
-    
