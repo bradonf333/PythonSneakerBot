@@ -28,7 +28,7 @@ def check_stock(url, model):
     # Get the raw html from the url
     raw_html = requests.get(url, headers=headers)
     # Page stores the readable version of the raw html
-    page = bs4.BeautifulSoup(raw_html.text)
+    page = bs4.BeautifulSoup(raw_html.text, "html.parser")
     # Gets the sizes from the size dropdown (not usable yet)
     list_of_raw_sizes = page.select('.size-dropdown-block')
     # Remove uneeded info from the sizes and then put in a list
