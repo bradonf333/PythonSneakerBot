@@ -22,7 +22,7 @@ def url_gen(model, size):
     #Build the URL
     url = 'http://www.adidas.com/us/nmd_r1-shoes/' + str(model) + '.html?forceSelSize=' + str(model) + '_' + str(shoe_size_code)
     return url
-def check_stock(url):
+def check_stock(url, model):
     """Doc-string"""
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
     raw_html = requests.get(url, headers=headers)
@@ -32,3 +32,5 @@ def check_stock(url):
     sizes = sizes.replace('\n\n', ' ')
     sizes = sizes.replace(' Select size \n', '')
     sizes = sizes.split()
+    for size in sizes:
+        print(str(model) + ' Sizes: '  + str(size)  + 'Available')
