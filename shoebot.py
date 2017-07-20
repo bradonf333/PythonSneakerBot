@@ -1,7 +1,7 @@
 """This is going to be a shoe bot"""
 # Base URL = http://www.adidas.com/us/nmd_r1-shoes/BZ0220.html?forceSelSize=BZ0220_640
 
-def urlgen(model, size):
+def url_gen(model, size):
     "function_docstring"
     base_size = 580
     #Base Size for the Shoe is 6.5
@@ -16,3 +16,4 @@ def urlgen(model, size):
     #Build the URL
     url = 'http://www.adidas.com/us/nmd_r1-shoes/' + str(model) + '.html?forceSelSize=' + str(model) + '_' + str(shoe_size_code)
     return url
+def check_stock(model, size):
