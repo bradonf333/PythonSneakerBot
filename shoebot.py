@@ -43,5 +43,5 @@ def main(model, size):
     """Doc-string"""
     # Set the url to the result of the url_gen function
     url = url_gen(model, size)
-    # Calls the check_stock function passing in the url created 
+    # Calls the check_stock function passing in the url created
     check_stock(url, model)
