@@ -1,9 +1,9 @@
 """This is going to be a shoe bot"""
 # Import dependencies
 import random
+import webbrowser
 import bs4
 import requests
-import webbrowser
 
 # Base URL = http://www.adidas.com/us/nmd_r1-shoes/BZ0220.html?forceSelSize=BZ0220_640
 
