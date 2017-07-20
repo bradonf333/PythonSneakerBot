@@ -34,3 +34,7 @@ def check_stock(url, model):
     sizes = sizes.split()
     for size in sizes:
         print(str(model) + ' Sizes: '  + str(size)  + 'Available')
+def main(model, size):
+    """Doc-string"""
+    url = url_gen(model, size)
+    
