@@ -27,4 +27,8 @@ def check_stock(url):
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
     raw_html = requests.get(url, headers=headers)
     page = bs4.BeautifulSoup(raw_html.text)
-    
+    list_of_raw_sizes = page.select('.size-dropdown-block')
+    sizes = str(list_of_raw_sizes[0].getText()).replace('\t', '')
+    sizes = sizes.replace('\n\n', ' ')
+    sizes = sizes.replace(' Select size \n', '')
+    sizes = sizes.split()
