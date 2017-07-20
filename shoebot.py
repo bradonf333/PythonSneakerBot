@@ -25,16 +25,24 @@ def url_gen(model, size):
 def check_stock(url, model):
     """Doc-string"""
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
+    # Get the raw html from the url
     raw_html = requests.get(url, headers=headers)
+    # Page stores the readable version of the raw html
     page = bs4.BeautifulSoup(raw_html.text)
+    # Gets the sizes from the size dropdown (not usable yet)
     list_of_raw_sizes = page.select('.size-dropdown-block')
+    # Remove uneeded info from the sizes and then put in a list
     sizes = str(list_of_raw_sizes[0].getText()).replace('\t', '')
     sizes = sizes.replace('\n\n', ' ')
     sizes = sizes.replace(' Select size \n', '')
     sizes = sizes.split()
+    # Prints a message telling the user what sizes are available
     for size in sizes:
-        print(str(model) + ' Sizes: '  + str(size)  + 'Available')
+        print(str(model) + ' Sizes: '  + str(size)  + ' Available')
 def main(model, size):
     """Doc-string"""
+    # Set the url to the result of the url_gen function
     url = url_gen(model, size)
+    # Calls the check_stock function passing in the url created 
+    check_stock(url, model)
     
