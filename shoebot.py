@@ -6,6 +6,12 @@ import bs4
 import requests
 
 # Base URL = http://www.adidas.com/us/nmd_r1-shoes/BZ0220.html?forceSelSize=BZ0220_640
+# To go further I will need to buy proxies... bot sure if I want to do that yet.
+# If I do decide to buy them I will finish the program.
+#
+# Also might be able to create it as more of a proof of concept w/o proxies
+
+
 
 def url_gen(model, size):
     "function_docstring"
