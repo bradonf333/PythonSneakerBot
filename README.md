@@ -3,7 +3,7 @@ Shoe bot created in Python that will auto purchase shoes from Adidas website.
 
 Since I can't do it manually because everyone else uses bots I wanted to create my own.
 
-As of right now it will just ask for the model # of the shoe and your size. Then
+As of right now it will just ask for the model # of the shoe and your size. Then it will list the actual sizes that are in stock.
 
 ## On Hold... for now
 To go further I will need to buy proxies... bot sure if I want to do that yet.
