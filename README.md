@@ -1,8 +1,9 @@
-Shoe bot that will auto purchase shoes.
+## Python Sneakerbot
+Shoe bot created in Python that will auto purchase shoes.
 
 Since I can't do it manually because everyone else uses bots I wanted to create my own.
 
-##On Hold... for now##
+## On Hold... for now
 To go further I will need to buy proxies... bot sure if I want to do that yet.
 If I do decide to buy them I will finish the program. 
 
